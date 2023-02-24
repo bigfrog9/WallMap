@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace WallMap
 {
-    internal class Enemy
+    internal class Guard
     {
         public int destX;
         public int destY;
@@ -15,63 +14,58 @@ namespace WallMap
         public int x;
         public int y;
 
-        public Enemy(int x, int y)
+        public int maxX;
+        public int minX;
+
+        public Guard(int maxX, int minX, int y, int x, Player player)
         {
-            this.x = x;
+            this.maxX = maxX;
+            this.minX = minX;
             this.y = y;
+            this.x = x;
+            this.player = player;
         }
 
         public bool isWall = false;
 
         public Player player;
 
-        public bool isPlayer=false;
+        public bool isPlayer = false;
 
-        public bool Kill=false;
+        public bool Kill = false;
+
+        public bool goingRight = true;
+
+        public bool goingLeft = false;
 
         public void Update()
         {
-            destX = x;
-            destY = y;
-
-            Random random = new Random();
+            
 
             if (Kill == false)
             {
+                destX = x;
+                destY = y;
+                //int move = random.Next(1, 4);
 
-
-                int move = random.Next(1,4);
-
-                if (move == 1)
+                if (goingRight)
                 {
-                    destY = destY - 1;
+                    destX++;
                 }
 
-                else if (move==2)
+                if (goingRight==false)
                 {
-                    destY = destY + 1;
+                    destX--;
                 }
 
-                else if (move==3)
+                if (destX >= maxX)
                 {
-                    destX = destX - 1;
+                    goingRight = false;
                 }
 
-                else if (move==4)
+                if (destX <= minX)
                 {
-                    destX = destX + 1;
-                }
-
-                switch (Program.map.map[destX, destY])
-                {
-                    case ' ':
-                        isWall = false;
-                        break;
-
-                    case 'o':
-                        isWall = true;
-                        break;
-;
+                    goingRight = true;
                 }
 
                 if (destX == player.x && destY == player.y)
@@ -86,10 +80,10 @@ namespace WallMap
 
                 if (isPlayer)
                 {
-                    player.Health = player.Health - 1;
+                    Program.arrested = true;
                 }
 
-                if (isWall == false&&isPlayer==false)
+                if (isWall==false&&isPlayer == false)
                 {
                     x = destX;
                     y = destY;
@@ -103,7 +97,7 @@ namespace WallMap
             if (Kill == false)
             {
                 Console.SetCursorPosition(x, y);
-                Console.Write("Z");
+                Console.Write("G");
 
             }
         }

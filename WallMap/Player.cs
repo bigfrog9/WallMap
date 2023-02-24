@@ -8,28 +8,33 @@ namespace WallMap
 {
     internal class Player
     {
+        public int Health = 3;
+
+        public bool Kill;
+
         static ConsoleKeyInfo input;
         public int destX;
         public int destY;
 
-        public static bool win = false;
+        public bool win = false;
 
         public int x = 2;
-        public int y = 2;
+        public int y = 14;
 
         public bool isWall = false;
 
-        public Enemy enemy;
-        static public Program program = new Program();
-
-        public Player(Enemy enemy)
-        {
-            this.enemy = enemy;
-        }
+        public bool isSpikes = false;
         public void Update()
         {
             destX = x;
             destY = y;
+
+            
+
+            if (Health == 0)
+            {
+                Kill = true;
+            }
 
             input = Console.ReadKey(true);
 
@@ -53,14 +58,20 @@ namespace WallMap
                 destX = destX + 1;
             }
 
-            switch (Program.map.map[destY, destX])
+            switch (Program.map.map[destX, destY])
             {
-                case '~': isWall = false;
+                case ' ': isWall = false;
                     break;
 
                 case 'o': isWall = true;
                     break;
+
+                case 'x': isSpikes = true;
+                    isWall = true;
+                    break;
+
             }
+
 
             if (isWall == false)
             {
@@ -68,10 +79,10 @@ namespace WallMap
                 y = destY;
             }
 
-            if (x == enemy.x && y == enemy.y)
-            {
-                win = true;
-            }
+            //if (x == enemy.x && y == enemy.y)
+            //{
+             //   win = true;
+            //}
         }
 
 
