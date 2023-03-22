@@ -15,7 +15,7 @@ namespace WallMap
 
 
 
-        public char[,] map = new char[50,16];
+        public char[,] map = new char[129,16];
 
 
         //public char[,] map = new char[,]

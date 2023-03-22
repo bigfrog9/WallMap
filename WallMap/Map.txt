@@ -1,16 +1,16 @@
-oooooooooooooooooooooooooooooooooooooooooooooooooo
-o                 oo             xxxxxxx        oo
-o         xxxxxx  oo      xxxxx                 oo
-o  ooooooooooooooooo  oooooooooooooooooooooooo  oo
-o  ooooooooooooooooo  oooooooooooooooooooooooo  oo
-o         xxxxxxxxx                        ooo  oo
-o                                  xxxx    ooooooo
-o  oooooooooooo  oooooooooooooooooooooooo  ooooooo
-o  oooooooooooo  oooooooooooooooooooooooo        o
-o  oo                xxxxxxxxxxxx     xoo        o
-o  oo                                 xooooooooooo
-o  oo  oooooooooooooooooooo  ooooooooooooooooooooo
-o  oo  oooooooooooooooooooo  ooooooooooo         o
-o  oo  oo                                        o
-o  oo  oo       xxxxxxxxxxxxxxxxxx        oooooooo
-oooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+o                 oo             xxxxxxx        oooooooooooooooooooooooooooooo                                                  o
+o         xxxxxx  oo      xxxxx                 oooxxxxxxxxxxxxxxxxxxxxxxxxxoo                                                  o
+o  ooooooooooooooooo  oooooooooooooooooooooooo  ooox                       xoo                                                  o
+o  ooooooooooooooooo  oooooooooooooooooooooooo  ooox                       xoo                                                  o
+o         xxxxxxxxx                        ooo  ooox                       xoo                                                  o
+o                                  xxxx    oooooooox                        --                                                  o
+o  oooooooooooo  oooooooooooooooooooooooo  oooooooox                        00                                                  o
+o  oooooooooooo  oooooooooooooooooooooooo        oox                        00                                                  o
+o  oo                xxxxxxxxxxxx     xoo        oox                        00                                                  o
+o  oo                                 xoooooooooooox                        --                                                  o
+o  oo  oooooooooooooooooooo  oooooooooooooooooooooox                       xoo                                                  o
+o  oo  oooooooooooooooooooo  ooooooooooo                                   xoo                                                  o
+o  oo  oo                                            xxxxxxxxxxxxxxxxxxxxxxxoo                                                  o
+o  oo  oo       xxxxxxxxxxxxxxxxxx        oooooooooooooooooooooooooooooooooooo                                                  o
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
