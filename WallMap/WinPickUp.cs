@@ -19,7 +19,7 @@ namespace WallMap
 
         public void placePickUp(int y, int x)
         {
-            if (player.win == false)
+            if (PickUp == false)
             {
                 Console.SetCursorPosition(x, y);
                 Console.Write("W");

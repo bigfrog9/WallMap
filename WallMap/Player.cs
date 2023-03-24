@@ -24,6 +24,9 @@ namespace WallMap
         public bool isWall = false;
 
         public bool isSpikes = false;
+
+        public bool bossAggro=false;
+
         public void Update()
         {
             destX = x;
@@ -58,7 +61,7 @@ namespace WallMap
                 destX = destX + 1;
             }
 
-            switch (Program.map.map[destX, destY])
+            switch (GameManager.map.map[destX, destY])
             {
                 case ' ': isWall = false;
                     break;
@@ -70,8 +73,11 @@ namespace WallMap
                     isWall = true;
                     break;
 
-            }
+                case 'l': bossAggro = true;
+                    isWall = false;
+                    break;
 
+            }
 
             if (isWall == false)
             {

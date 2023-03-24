@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace WallMap
 {
-    internal class killPickUp
+    internal class Key
     {
-
         public Player player;
 
         public Enemy enemy1;
@@ -17,12 +15,9 @@ namespace WallMap
 
         public Guard guard;
 
-        public killPickUp(Player player, Enemy enemy1, Enemy enemy2, Guard guard)
+        public Key(Player player)
         {
             this.player = player;
-            this.enemy1 = enemy1;
-            this.enemy2 = enemy2;
-            this.guard = guard;
         }
 
         public bool PickUp = false;
@@ -31,10 +26,10 @@ namespace WallMap
 
         public void placePickUp(int y, int x)
         {
-            if (PickUp==false)
+            if (Used == false)
             {
                 Console.SetCursorPosition(x, y);
-                Console.Write("K");
+                Console.Write("F");
 
                 if (player.destX == x && player.destY == y)
                 {
@@ -42,7 +37,7 @@ namespace WallMap
                     enemy2.Kill = true;
                     guard.Kill = true;
 
-                    PickUp = true;
+                    Used = true;
                 }
             }
 

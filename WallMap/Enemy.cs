@@ -29,6 +29,8 @@ namespace WallMap
 
         public bool Kill=false;
 
+        public GameManager gameManager=new GameManager();
+
         public void Update()
         {
             destX = x;
@@ -62,7 +64,7 @@ namespace WallMap
                     destX = destX + 1;
                 }
 
-                switch (Program.map.map[destX, destY])
+                switch (GameManager.map.map[destX, destY])
                 {
                     case ' ':
                         isWall = false;

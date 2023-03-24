@@ -80,9 +80,9 @@ namespace WallMap
 
                 if (isPlayer)
                 {
-                    Program.arrested = true;
+                    GameManager.arrested = true;
                 }
-
+                
                 if (isWall==false&&isPlayer == false)
                 {
                     x = destX;
